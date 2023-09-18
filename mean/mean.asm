@@ -33,16 +33,7 @@ read_loop:
     cmp rdx, [array_len]
     jge calculate
     mov rsi, [array1 + rdx * 8]
-    cmp rsi, [array2 + rdx * 8]
-    jl negative
-
-positive:
     sub rsi, [array2 + rdx * 8]
-    jmp iterate
-
-negative:
-    mov rsi, [array2 + rdx * 8]
-    sub rsi, [array1 + rdx * 8]
 
 iterate:
     add rax, rsi
