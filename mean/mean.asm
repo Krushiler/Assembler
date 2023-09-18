@@ -57,6 +57,9 @@ print:
 
 end:
     ret
+    xor rdx, rdx
+    xor rsi, rsi
+    xor rbp, rbp
     mov rax, 60
     xor rdi, rdi
     syscall
